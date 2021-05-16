@@ -1,0 +1,10 @@
+.jumbotron {
+    background-color: #d1d8e0;
+    width: 60%;
+    margin: auto;
+    box-shadow: 10px 10px 10px 10px #c8d6e5;
+}
+
+label {
+    color: black;
+}

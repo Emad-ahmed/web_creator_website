@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+
+
+
+.settings {
+    background-color: #242336;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 700px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 15px;
+}
+
+.settings h1 {
+    margin: 0px;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.settings form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.settings form>label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.settings form>label input {
+    width: 95px;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.settings form>label input:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #716af3;
+    position: relative;
+}
+
+.settings form>label input:checked::after {
+    content: "\2713";
+    position: absolute;
+    color: white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 5px;
+}
+
+.settings form>label span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.settings form>label+label {
+    margin-top: 15px;
+}
+
+.settings form .settings__content {
+    margin-left: -30px;
+    background-color: #1e1d2e;
+    margin-right: -30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.settings form .settings__content p {
+    padding: 30px;
+    color: #b3b2c5;
+}
+
+.settings form .settings__content p a {
+    color: #716af3;
+}
+
+.settings form .settings__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.settings form .settings__footer h1 {
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+
+.settings form .settings__footer label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.settings form .settings__footer label+label {
+    margin-top: 15px;
+}
+
+.settings form .settings__footer label span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.settings form .settings__footer label input {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.settings form .settings__footer label input:checked {
+    position: relative;
+    background-color: #716af3;
+}
+
+.settings form .settings__footer label input:checked::after {
+    background-color: white;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 7px;
+}
+
+.settings form .settings__footer .send {
+    margin-top: 50px;
+}
+
+.settings form .settings__footer .send input {
+    line-height: 65px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: #716af3;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

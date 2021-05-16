@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Faq
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/setting.css' %}">
+<div class="container">
+    <div class="settings m-auto">
+        <h1>Get email updates when:</h1>
+        <form>
+            <label>
+                <input type="checkbox" name="" id="">
+                <span>You’re the owner</span>
+            </label>
+            <label>
+                <input type="checkbox" name="" id="" checked>
+                <span>You’re the assignee/span>
+            </label>
+            <label>
+                <input type="checkbox" name="" id="" checked>
+                <span>Someone mentions you</span>
+            </label>
+            <label>
+                <input type="checkbox" name="" id="">
+                <span>Somone is assigning you</span>
+            </label>
+
+            <div class="settings__content">
+                <p>You may also receive other email notifications <br> your admin configured. <a href="#">Learn more</a>
+                </p>
+            </div>
+
+            <div class="settings__footer">
+                <h1>Email format</h1>
+                <label>
+                    <input type="radio" name="sendType" id="" checked>
+                    <span>HTML</span>
+                </label>
+                <label>
+                    <input type="radio" name="sendType" id="">
+                    <span>Text</span>
+                </label>
+
+                <div class="send">
+                    <input type="submit" value="Save">
+                </div>
+            </div>
+    </div>
+
+
+
+    </form>
+</div>
+</div>
+
+{% endblock %}

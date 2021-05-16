@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <img src="{% static 'images/img2.png' %}" alt="" class="imgbar mt-4 ml-5" onmousemove="navbarmove(this)">
+    <header>
+        <a href="/" class="navbar-brand mt-4">Emadsite</a>
+        <nav id="sidebar" onmousemove="navbarmove1(this)" onmouseout="navbarout(this)">
+            <ul>
+                <li><a href="/"><i class="fa fa-home mr-3" aria-hidden="true"></i>Home</a></li>
+                <li><a href="{% url 'about' %}"><i class="fa fa-home mr-3" aria-hidden="true"></i>About Us</a></li>
+                <li><a href="{% url 'services' %}"><i class="fa fa-home mr-3" aria-hidden="true"></i>Services</a></li>
+                <li><a href="{% url 'faq' %}"><i class="fa fa-home mr-3" aria-hidden="true"></i>Faq</a></li>
+                <li><a href="{% url 'setting' %}"><i class="fa fa-home mr-3" aria-hidden="true"></i>Setting</a></li>
+                <li><a href="{% url 'contact' %}"><i class="fa fa-home mr-3" aria-hidden="true"></i>Contact</a></li>
+            </ul>
+        </nav>
+        <div class="btngroup mt-4">
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'user_logout' %}" class="btn btn-danger mr-5">Logout</a>
+
+            {% else %}
+            <a href="{% url 'signup' %}" class="btn btn-info mr-4">Signup</a>
+            <a href="{% url 'login' %}" class="btn btn-danger mr-5">Login</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <hr>
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}">
+        'use strict';
+
+        $(document).ready(function () {
+            $(window).bind('scroll', function (e) {
+                parallaxScroll();
+            });
+        });
+
+        function parallaxScroll() {
+            const scrolled = $(window).scrollTop();
+            $('#team-image').css('top', (0 - (scrolled * .20)) + 'px');
+            $('.img-1').css('top', (0 - (scrolled * .35)) + 'px');
+            $('.img-2').css('top', (0 - (scrolled * .05)) + 'px');
+        }
+    </script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

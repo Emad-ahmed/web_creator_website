@@ -1,0 +1,23 @@
+{% extends 'anothernav.html' %}
+
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<div class="container">
+    <div class="jumbotron text-center">
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br> <br>
+            {% endfor %}
+            <input type="submit" class="btn btn-info">
+        </form>
+
+    </div>
+</div>
+{% endblock %}

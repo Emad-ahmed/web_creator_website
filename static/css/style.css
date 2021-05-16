@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    margin-left: 45%;
+    text-shadow: #222f3e;
+    color: salmon;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+#sidebar {
+    position: fixed;
+    background-color: #222f3e;
+    padding: 30px;
+    height: 100%;
+    width: 15vw;
+    z-index: 100;
+    transition: .5s;
+    opacity: 1;
+}
+
+#sidebar ul {
+    margin-top: 8%;
+    list-style: none;
+}
+
+#sidebar ul li {
+    padding-bottom: 50px;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #c8d6e5;
+}
+
+#sidebar ul li a:hover {
+    color: aliceblue;
+}
+
+.imgbar {
+    position: fixed;
+    width: 40px;
+}
